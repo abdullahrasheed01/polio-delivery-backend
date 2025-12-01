@@ -92,6 +92,20 @@ app.get('/api/admin/dashboard', (req, res) => {
   });
 });
 
+// Root route add karo
+app.get('/', (req, res) => {
+  res.json({ 
+    message: '🚀 Polio Delivery Backend API is Running!',
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth',
+      admin: '/api/admin',
+      polio: '/api/polio', 
+      delivery: '/api/delivery'
+    }
+  });
+});
+
 // Basic route
 app.get('/api', (req, res) => {
   res.json({ 
